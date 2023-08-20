@@ -1,0 +1,12 @@
+.rodape{
+    width: 100vw;
+    position:absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 30px;
+
+}
+.ropade p{
+    padding-block-end: 30px;
+}

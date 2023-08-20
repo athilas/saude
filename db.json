@@ -1,0 +1,14 @@
+{
+    "doencas":[
+        {
+        "nome": "gripe",
+        "sintomas": ["febre", "dores pelo corpo", "tosse"],
+        "tratamento": "procure um posto de saude"
+        },
+        {
+        "nome": "catapora",
+        "sintomas": ["febre", "dores pelo corpo", "manchas vermelhas pelo corpo", "coceira"],
+        "tratamento": "procure um hospital"
+        }
+        ]
+}
