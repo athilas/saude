@@ -1,46 +1,20 @@
-import { useState } from "react";
-import Titulo from "./componemte/titulo/Titulo";
-import Pesquisa from "./componemte/pesquisa/Pesquisa";
-import Resultado from "./componemte/resultado/Resultado";
-import Rodape from "./componemte/rodape/Rodape";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/home/home";
+import Login from "./pages/login/login";
+import Painel from "./pages/painel/painel";
 import './App.css';
 
 
 function App(){
-
-    const [nome, setNome]=useState( );
-
-    const data =[ {
-            "nome": "",
-            "sintomas": [],
-            "tratamento":"" 
-        },
-        {
-            "nome": "gripe",
-            "sintomas": ["febre", "dores pelo corpo", "tosse"],
-            "tratamento": "procure um posto de saude"
-        },
-        {
-            "nome": "catapora",
-            "sintomas": ["febre", "dores pelo corpo", "manchas vermelhas pelo corpo", "coceira"],
-            "tratamento": "procure um hospital"
-        }];
-    const saida = busca(nome);
-    function busca(dado){
-        for(let i in data){
-            if (dado === data[i].nome) return data[i];
-        }
-        return data[0];
-    }
-        
+  
     return(
-        <div className="container">
-            <Titulo/>
-            <Pesquisa setNome = {setNome}/>
-            <Resultado resultado={saida} />
-            <Rodape nome ={nome}/>
-        </div>
-
+        <Router>
+            <Routes>
+                <Route exact path="/" element={<Home/>}/>    
+                <Route path="/login" element ={<Login/>}/> 
+                <Route path="/painel" element = {<Painel/>}/>     
+            </Routes>
+        </Router>
     );
 }
 
