@@ -1,6 +1,6 @@
 import './pesquisa.css';
 import {FaSearch} from "react-icons/fa";
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 
 
@@ -10,22 +10,12 @@ function Pesquisa({setNome}) {
     
     const [dado, setDado] = useState();
     function Nome(){
-      
-        setNome(dado)
+        
+        setNome(dado);
         setDado('');
     }
 
-    useEffect(()=>{
-        fetch('http://localhosto:5000/doencas',{
-            method: 'GET',
-            headers:{
-                'Content-Type':'aplication/json',
-            },
-        })
-        .then((resp)=>resp.json())
-        
-    })
-
+    
     return (
         <div className='pesquisa'>
 

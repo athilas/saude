@@ -9,11 +9,35 @@ import './App.css';
 function App(){
 
     const [nome, setNome]=useState( );
+
+    const data =[ {
+            "nome": "",
+            "sintomas": [],
+            "tratamento":"" 
+        },
+        {
+            "nome": "gripe",
+            "sintomas": ["febre", "dores pelo corpo", "tosse"],
+            "tratamento": "procure um posto de saude"
+        },
+        {
+            "nome": "catapora",
+            "sintomas": ["febre", "dores pelo corpo", "manchas vermelhas pelo corpo", "coceira"],
+            "tratamento": "procure um hospital"
+        }];
+    const saida = busca(nome);
+    function busca(dado){
+        for(let i in data){
+            if (dado === data[i].nome) return data[i];
+        }
+        return data[0];
+    }
+        
     return(
         <div className="container">
             <Titulo/>
             <Pesquisa setNome = {setNome}/>
-            <Resultado nome ={nome}/>
+            <Resultado resultado={saida} />
             <Rodape nome ={nome}/>
         </div>
 
