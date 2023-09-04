@@ -21,10 +21,13 @@ function Resultado({resultado}){
             );
 
         }
-       return(
-        <>
-        </>
-    );
+
+         else{
+          return(
+              <>
+              </>
+          );
+         }
 }
 
 export default Resultado;
