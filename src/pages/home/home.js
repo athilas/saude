@@ -26,8 +26,9 @@ function Home(){
         }];
     const saida = busca(nome);
     function busca(dado){
+        dado = dado.toLowerCase();
         for(let i in data){
-            if (dado.toLowerCase() === data[i].nome) return data[i];
+            if (dado === data[i].nome) return data[i];
         }
         return data[0];
     }
