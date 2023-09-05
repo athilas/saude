@@ -24,7 +24,7 @@ function Home(){
             "sintomas": ["febre", "dores pelo corpo", "manchas vermelhas pelo corpo", "coceira"],
             "tratamento": "procure um hospital"
         }];
-    const saida = busca(nome.toLowerCase);
+    const saida = busca(nome.toLowerCase());
     function busca(dado){
         for(let i in data){
             if (dado === data[i].nome) return data[i];
