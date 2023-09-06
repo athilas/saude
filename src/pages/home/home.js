@@ -3,6 +3,7 @@ import Titulo from "../../componemte/titulo/Titulo";
 import Pesquisa from "../../componemte/pesquisa/Pesquisa";
 import Resultado from "../../componemte/resultado/Resultado";
 import Rodape from "../../componemte/rodape/Rodape";
+import './home.css';
 
 
 function Home(){
