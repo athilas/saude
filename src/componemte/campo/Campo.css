@@ -1,0 +1,21 @@
+.etiqueta{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    -ms-flex-align: center;
+    font-size: 2em;
+}
+
+
+.campo{
+    padding: 10px;
+    margin: 15px 0;
+    border-radius: 8px;
+    background-color: rgba(10,10,10,0.3);
+    box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.836);
+    font-size: 1.1em;
+}
+.campo::placeholder{
+    font-size: 1.1em;
+}

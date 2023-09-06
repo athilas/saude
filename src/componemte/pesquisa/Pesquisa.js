@@ -6,12 +6,12 @@ import { useState } from 'react';
 
 
 
-function Pesquisa({setNome}) {
+function Pesquisa({setNome, local}) {
     
     const [dado, setDado] = useState();
     function Nome(){
         
-        setNome(dado);
+        setNome(dado.toLowerCase());
         setDado('');
     }
 
@@ -20,7 +20,7 @@ function Pesquisa({setNome}) {
         <div className='pesquisa'>
 
             <input type ="text" 
-            placeholder='Digite o nome da doença' 
+            placeholder={local} 
             className='entrada'
             value={dado}
             onChange={(e)=>setDado(e.target.value)}

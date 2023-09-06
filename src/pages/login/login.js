@@ -1,10 +1,12 @@
-
+import Campo from '../../componemte/campo/Campo';
+import './login.css';
 
 function Login(){
     return(
-        <>
-        <p>Login</p>
-        </>
+        <form className="login">
+            <Campo texto="Usuario"/>
+            <Campo texto="Senha"/>
+        </form>
     );
 }
 

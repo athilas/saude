@@ -24,6 +24,7 @@ function Home(){
             "sintomas": ["febre", "dores pelo corpo", "manchas vermelhas pelo corpo", "coceira"],
             "tratamento": "procure um hospital"
         }];
+    
     const saida = busca(nome);
     function busca(dado){
         for(let i in data){
@@ -35,7 +36,7 @@ function Home(){
     return(
         <div className="container">
             <Titulo/>
-            <Pesquisa setNome = {setNome}/>
+            <Pesquisa setNome = {setNome} local="Digite o nome da doença"/>
             <Resultado resultado={saida} />
             <Rodape nome ={nome}/>
         </div>
