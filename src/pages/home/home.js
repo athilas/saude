@@ -27,6 +27,7 @@ function Home(){
     
     const saida = busca(nome);
     function busca(dado){
+        
         for(let i in data){
             if (dado === data[i].nome) return data[i];
         }
